@@ -5,6 +5,7 @@ import Menu from '../Components/Header/Menu';
 import Baner from "../Components/Header/Baner";
 import Person from "../Components/Person";
 import Play from '../Components/Play'
+import Middle from "../Components/Middle";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -23,6 +24,7 @@ const IndexPage = () => {
       <Menu />
       <Baner />
       <Person />
+      <Middle />
       <Play />
     </main>
   )
