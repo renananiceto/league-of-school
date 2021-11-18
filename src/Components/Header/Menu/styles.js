@@ -2,31 +2,36 @@ import styled from "styled-components";
 
 
 export const Container = styled.div`
-
+ width: 100%;
+ display: flex;
+ -webkit-box-shadow: 1px 11px 11px 5px rgba(0,0,0,0.23); 
+  box-shadow: 1px 11px 11px 5px rgba(0,0,0,0.23);
 `
-export const ContainerBox = styled.div`
-  /* width: 100%; */
+export const Wrapper = styled.div`
+  max-width: 1366px;
+  width: 100%;
+  height: 107px;
+  margin: 0 auto;
   display: flex;
-  background-color: black;
-  background-image: url(${props => props.back});
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: space-between;
+  align-items: center;
 `
 
-export const Box = styled.div`  
-  width: 60%;
+export const Paragraph = styled.div`
+  display: flex;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+  :hover{
+    opacity: 0.7;
+  }
 `
-export const Boox = styled.div`
-  position: absolute;
-  right: 0;
-  width: 998px;
-  overflow: hidden;
-`
+
 export const BoxLogo = styled.div`
-position: absolute;
-left: 675px;
-display: flex;
-justify-content: center;
-z-index: 99;
-top: 306px;
+width: 50px;
+img{
+  width: 100%;
+  cursor: pointer;
+}
 `
+
