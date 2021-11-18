@@ -13,4 +13,18 @@ export const Wrapper = styled.div`
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40vh;
+  h2{
+    font-size: 60px;
+  }
+`
+
+export const BoxParagraph = styled.div`
+
+p{
+  font-size: 25px;
+}
 `

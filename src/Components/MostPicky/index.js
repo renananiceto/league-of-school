@@ -1,9 +1,8 @@
 import React from 'react'
 import * as S from './styles'
-
 import { graphql, useStaticQuery } from 'gatsby'
 
-export default function Person() {
+export default function MostPicky() {
   const data = useStaticQuery(graphql`
   query {
     alldata{
@@ -21,21 +20,22 @@ export default function Person() {
   }
 `)
 
-  const { title, personas } = data.alldata.boxPersonas[0]
-  console.log('AAAAA', data.alldata.boxPersonas[0].personas)
+  const { personas } = data.alldata.boxPersonas[0]
+
   return (
     <S.Container>
       <S.BoxTitle>
-        {title}
+        <p>Most Picky</p>
       </S.BoxTitle>
       <S.Wrapper>
-        {personas.map((item, index) => (
-          <S.BoxMap Key={index}>
-            <img src={item.img.url} alt='#' />
-            <p>{item.title}</p>
-            <button>{item.btn}</button>
-          </S.BoxMap>
-        ))}
+        {
+          personas.slice(0, 2).map((item) => (
+            <S.BoxPickey>
+              <img src={item.img.url} alt='#' />
+              <p>{item.title}</p>
+            </S.BoxPickey>
+          ))
+        }
       </S.Wrapper>
     </S.Container>
   )

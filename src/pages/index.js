@@ -6,6 +6,7 @@ import Baner from "../Components/Header/Baner";
 import Person from "../Components/Person";
 import Play from '../Components/Play'
 import Middle from "../Components/Middle";
+import MostPicky from '../Components/MostPicky'
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -17,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const IndexPage = () => {
+  
 
   return (
     <main>
@@ -25,6 +27,7 @@ const IndexPage = () => {
       <Baner />
       <Person />
       <Middle />
+      <MostPicky />
       <Play />
     </main>
   )
